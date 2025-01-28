@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    @@include('blocks/head.html')
+    <body class="body">
+        @@include('blocks/page-header.html')
+    </body>
+    <main class="main">
+        <div class="listing">
+            <div class="listing__pizza-list">
+            <!-- prettier-ignore -->
+             @@loop('blocks/pizza-card.html', [
+                {
+                    "class": "listing__pizza-card",
+                    "img": "assets/images/Пепперони_.jpg",
+                    "alt": "пепперони",
+                    "title": "Пепперони",
+                    "descr": "Пикантная пепперони, увеличенная порция моцареллы, фирменный томатный соус",
+                    "price": "от 299 ₽"
+                },
+                {
+                    "class": "listing__pizza-card",
+                    "img": "assets/images/Сырная.jpg",
+                    "alt": "сырная",
+                    "title": "Сырная",
+                    "descr": "Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо",
+                    "price": "от 289 ₽"
+                }, 
+                {
+                    "class": "listing__pizza-card",
+                    "img": "assets/images/Двойной цыпленок.jpg",
+                    "alt": "цыплёнок",
+                    "title": "Двойной цыпленок",
+                    "descr": "Цыпленок , моцарелла, фирменный соус альфредо",
+                    "price": "от 389 ₽"
+                },
+                {
+                    "class": "listing__pizza-card",
+                    "img": "assets/images/Пепперони_.jpg",
+                    "alt": "пепперони",
+                    "title": "Пепперони",
+                    "descr": "Пикантная пепперони, увеличенная порция моцареллы, фирменный томатный соус",
+                    "price": "от 299 ₽"
+                },
+                {
+                    "class": "listing__pizza-card",
+                    "img": "assets/images/Сырная.jpg",
+                    "alt": "сырная",
+                    "title": "Сырная",
+                    "descr": "Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо",
+                    "price": "от 289 ₽"
+                },
+                {
+                    "class": "listing__pizza-card",
+                    "img": "assets/images/Двойной цыпленок.jpg",
+                    "alt": "цыплёнок",
+                    "title": "Двойной цыпленок",
+                    "descr": "Цыпленок , моцарелла, фирменный соус альфредо",
+                    "price": "от 389 ₽"
+                },
+            ])
+        </div>
+        </div>
+        main
+    </main>
+    test
+</html>
