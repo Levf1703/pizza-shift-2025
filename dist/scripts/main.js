@@ -1,20 +1,27 @@
 (function () {
    "use strict";
    const root = document.documentElement;
-   const eventPP = document.querySelector("#js-eventPP");
+   const pizzaMW = document.querySelector("div.modal-window");
 
-   if (eventPP) {
-    const evenOpenBtn = document.querySelector("#js-pizzaOpenBtn");
+   if (pizzaMW) {
+    const pizzaOpenBtn = document.querySelectorAll("button.pizza__btn");
 
-    evenOpenBtn.addEventListener("click", function () {
-        root.classList.add("show-pizza-popup");
+    for (let Btn of pizzaOpenBtn) {
+        Btn.addEventListener("click", function () {
+        root.classList.add("show-pizza_modal-window");
     });
-
-    eventPP.addEventListener("click", function (event) {
-        if (event.target === this)
-        {
-            root.classList.remove("show-pizza-popup");
+    
+    pizzaMW.addEventListener("click", function (event) {
+        if (event.target === this){
+            root.classList.remove("show-pizza_modal-window");
         }
     });
+
+    document.addEventListener("keyup", function (event) {
+        if (event.key === "Escape" || event.keyCode === 27) {
+            root.classList.remove("show-pizza_modal-window");
+        }
+    });
+    }
    }
 })();
